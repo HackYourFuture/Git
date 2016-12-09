@@ -1,12 +1,4 @@
-Agenda
-
-Branches
-branch Cheat-sheet
-Checkout
-HEAD
-git log (with options)
-git diff
-
+This tutorial has three sections: (1) Branches (2) Checkout (3) HEAD
 
 # Branches
 
@@ -34,12 +26,13 @@ To list all the remotes, run
 ```
 
 ## Types of Branches
- On your local machine, you've got three types of branches:
- 1.1 local branches : can be non-tracking branches and tracking branches
- 1.2 remote-tracking branches
 
- 2. Branches on a remote machine 
- (you have just one type of branch)
+ On your local machine, you've got three types of branches:
+ 1. local branches : non-tracking
+ 2. local branches : tracking
+ 3. remote-tracking branches
+
+ On a remote machine, you have just one type of branch
 
 ## Types of Branches (1) Branches on your machine:
 
