@@ -28,9 +28,9 @@ To list all the remotes, run
 ## Types of Branches
 
 On your local machine, you've got three types of branches:
-1. local branches : non-tracking
-2. local branches : tracking
-3. remote-tracking branches
+ 1. local branches : non-tracking
+ 2. local branches : tracking
+ 3. remote-tracking branches
 
 On a remote machine, you have just one type of branch
 
