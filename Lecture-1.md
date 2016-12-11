@@ -79,7 +79,7 @@ You will have id\_rsa and id\_rsa.pub files in the directory at the following pa
 
 ## 2.3 Creating a repository
 
-Using your GitHub account, create a repository to which you can add files. Name the repository as MyFirst. Create a public repository and check the box to create a README file. After you create the repository, the URL of your web page would be something like https://github.com/unmeshvrije/MyFirst . Replace unmeshvrije with your username. If you append .git to this URL, you will get the name of your GitHub repository: https://github.com/unmeshvrije/MyFirst.**git**
+Using your GitHub account, create a repository to which you can add files. Name the repository as MyFirst. Create a public repository and check the box to create a README file. After you create the repository, the URL of your web page would be something like https://github.com/unmeshvrije/MyFirst . Replace unmeshvrije with your username. If you append .git to this URL, you will get the name of your GitHub repository: https://github.com/unmeshvrije/MyFirst.*git*
 
 
 
