@@ -6,9 +6,9 @@ Tutorial for HackYourFuture Git basics. This tutorial has three sections:
 # 1. Git: 
 
 ## 1.1 What is Git, Etymology and a short history.
-Distributed version control system
-Linus Torvalds, 2005
-GIT: Global Information Tracker or the stupid content tracker or unpleasant person in British slang
+* [ ] Version Control (aka Revision control, source control)
+* [ ] Distributed version control system, Linus Torvalds, 2005
+* [ ] GIT: Global Information Tracker or the stupid content tracker or unpleasant person in British slang
 
 ## 1.2 Installing Git
  For Windows,
@@ -84,12 +84,14 @@ You will have id_rsa and id_rsa.pub files in the directory at the following path
 ## 3.1 Creating the repository
 ```
 Create a new directory in your home directory or any other suitable location using
-$ mkdir hello-world
+$mkdir hello-world
 Enter it
 $cd hello-world
 and create a new git repository using 
 $git init
 ```
+
+You can clone a repository with `git clone <URL>` command. This copies the repository from a remote machine and initializes it on your machine. You can try to clone some public repositories on github.com
 
 ## 3.2 Workflow
  Working Directory -> Index -> HEAD
@@ -97,28 +99,29 @@ $git init
 
  configure your email and username of Github in the git
  ```
- git config --global user.email "username@email.com"
- git config --global user.name "username"
+$git config --global user.email "username@email.com"
+$git config --global user.name "username"
 ```
 
  Make sure that the username is the one you used for the github account.
 
 ## 3.3 add and commit
 ```
- You can propose changes (add it to the Index) using
-$git add <filename>
-$git add *  # adds everything in the current directory
- This is the first step in the basic git workflow. To actually commit these changes use
-$git commit -m "Commit message"
+ #You can propose changes (add it to the Index) using
+ $git add <filename>
+ #This is the first step in the basic git workflow.
+ 
+ #To actually commit these changes use
+ $git commit -m "Commit message"
 ```
 
 ## 3.4 Pushing changes
 ```
- If you have not cloned (Our case) an existing repository and want to connect your repository to a remote server, you need to add it with
-git remote add origin <server>
-where
-<server> : https://github.com/user/repo.git
-Now you are able to push your changes to the selected remote server i.e. your remote repository on GitHub.
-Your changes are now in the HEAD of your local working copy. To send those changes to your remote repository, execute 
-git push -u origin master
+ #If you have not cloned (Our case) an existing repository and want to connect your repository to a remote server, you need to add it with
+ $git remote add origin <server>
+ where
+ <server> : https://github.com/user/repo.git
+ Now you are able to push your changes to the selected remote server i.e. your remote repository on GitHub.
+ Your changes are now in the HEAD of your local working copy. To send those changes to your remote repository, execute 
+ $git push -u origin master
 ```

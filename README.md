@@ -12,7 +12,7 @@ We want to use this repository as an archive of course material (slides/tutorial
 ### The teacher should:
 
 * [ ] Have explained the need for VCS for developers working together on software
-* [ ] Have given a short intro about VCS (version control software)
+* [ ] Have given a short intro about VCS (version control system)
 * [ ] Have talked about GIT: what is a `commit` and the `3 different stages`.
 * [ ] Have shown in live-coding how to create a new repository: `clone`, `init`
 * [ ] Have shown how to add files to that new repository: `add` `rm`
