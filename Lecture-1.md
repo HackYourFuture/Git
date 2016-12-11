@@ -72,14 +72,14 @@ ssh-keygen -C "username@email.com" -t rsa
 
 Supply your Github email address instead of this fake one. 
 Accept the default location storage (default file) for the keys. When prompted for a passphrase, make up one, and don't forget it ! This is your private key, do not share it with anyone.
-You will have id_rsa and id_rsa.pub files in the directory at the following path /c/Users/<your_user_name>/.ssh/
+You will have id\_rsa and id\_rsa.pub files in the directory at the following path /c/Users/<your_user_name>/.ssh/
 
- You want to copy the contents of the id_rsa.pub (open it with a simple text editor or use the command cat in the Bash)
- After you copy the contents of the id_rsa.pub file, Go to the GitHub account, go to the settings find SSH and GPG keys option and add New SSH key.
+ You want to copy the contents of the id\_rsa.pub (open it with a simple text editor or use the command cat in the Bash)
+ After you copy the contents of the id\_rsa.pub file, Go to the GitHub account, go to the settings find SSH and GPG keys option and add New SSH key.
 
 ## 2.3 Creating a repository
 
-Using your GitHub account, create a repository to which you can add files. Name the repository as MyFirst. Create a public repository and check the box to create a README file. After you create the repository, the URL of your web page would be something like https://github.com/unmeshvrije/MyFirst . Replace unmeshvrije with your username. If you append .git to this URL, you will get the name of your GitHub repository: https://github.com/unmeshvrije/MyFirst__.git__
+Using your GitHub account, create a repository to which you can add files. Name the repository as MyFirst. Create a public repository and check the box to create a README file. After you create the repository, the URL of your web page would be something like https://github.com/unmeshvrije/MyFirst . Replace unmeshvrije with your username. If you append .git to this URL, you will get the name of your GitHub repository: https://github.com/unmeshvrije/MyFirst.git
 
 
 
