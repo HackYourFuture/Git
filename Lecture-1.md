@@ -57,7 +57,6 @@ Tutorial for HackYourFuture Git basics. This tutorial has three sections:
 * A valid Email address
 * An SSH key-pair
 
- For you to be able to communicate with Github securely, you have to generate an ssh keypair, and then register it on the Github website.
 
 ## 2.2 Generating the ssh keypair
 
@@ -76,7 +75,12 @@ Accept the default location storage (default file) for the keys. When prompted f
 You will have id_rsa and id_rsa.pub files in the directory at the following path /c/Users/<your_user_name>/.ssh/
 
  You want to copy the contents of the id_rsa.pub (open it with a simple text editor or use the command cat in the Bash)
- After you copy the contents of the id_rsa.pub file, Go to the GitHub account, settings and SSH/GPG keys and add this key.
+ After you copy the contents of the id_rsa.pub file, Go to the GitHub account, go to the settings find SSH and GPG keys option and add New SSH key.
+
+## 2.3 Creating a repository
+
+Using your GitHub account, create a repository to which you can add files. Name the repository as MyFirst. Create a public repository and check the box to create a README file. After you create the repository, the URL of your web page would be something like https://github.com/unmeshvrije/MyFirst . Replace unmeshvrije with your username. If you append .git to this URL, you will get the name of your GitHub repository: https://github.com/unmeshvrije/MyFirst**.git**
+
 
 
 # 3. Using Git
