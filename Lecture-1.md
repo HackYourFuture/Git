@@ -121,10 +121,10 @@ $git config --global user.name "username"
 
 ## 3.4 Pushing changes
 ```
- #If you have not cloned (Our case) an existing repository and want to connect your repository to a remote server, you need to add it with
- $git remote add origin <server>
- where
- <server> : https://github.com/user/repo.git
+#If you have not cloned (Our case) an existing repository and want to connect your repository to a remote server, you need to add it with
+$git remote add origin https://github.com/unmeshvrije/MyFirst.git
+Replace the URL with the repository you created in step 2.3
+
  Now you are able to push your changes to the selected remote server i.e. your remote repository on GitHub.
  Your changes are now in the HEAD of your local working copy. To send those changes to your remote repository, execute 
  $git push -u origin master
