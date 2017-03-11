@@ -47,8 +47,3 @@ We want to use this repository as an archive of course material (slides/tutorial
 * [ ] Know what the difference between the three types of branches are.
 * [ ] Know how to navigate between branches and what git commands to use for them.
 * [ ] Have an understanding of what `HEAD` means.
-
-
-## learning goals lesson 3
-
-TBA

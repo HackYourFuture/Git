@@ -3,7 +3,7 @@ This tutorial has three sections: (1) Branches (2) Checkout (3) HEAD
 # Branches
 
 ## Why Branches ?
-To expands
+To expand.
 Trees need branches to expand. 
 Banks needs (office) branches to expand.
 Company needs (code) branches to expand.
