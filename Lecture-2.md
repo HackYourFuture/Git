@@ -1,5 +1,6 @@
 This tutorial has three sections: (1) Branches (2) Checkout (3) HEAD
 
+
 # Branches
 
 ## Why Branches ?
@@ -143,6 +144,18 @@ Example:
 `git push --delete <remote> <branchname>`
 7. To delete all remote-tracking branches that are stale, that is, where the corresponding branches on the remote machine no longer exist:
 `git remote prune <remote>`
+8. To check the status of the git repository. (which files are staged, added to the commit, etc.)
+`git status`
+9. To see the log of previous 'n' commits,
+`git log -n`
+10. To revert the changes just made in the file <filename>
+`git checkout -- <filename>`
+11. To see the difference between the local repository and the latest commit (HEAD)
+`git diff [filename]`
+12. THIS IS DANGEROUS!!: To remove the file from both working directory and git
+`git rm`
+13. To remove the file from git tracking, but still keep it in the working directory:
+`git rm --cached`
 
     You may have noticed that in some commands, you use <remote>/<branch>, and other commands, <remote> <branch>.
 
