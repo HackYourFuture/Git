@@ -127,7 +127,7 @@ $ tree -F .git/refs/remotes/
 
     If you could log in to the remote machine and find the repository in the filesystem, you could have a look at all its branches under refs/heads/.
 
-    Cheat sheet:
+# Cheat sheet:
 1. To delete a local branch, whether tracking or non-tracking, safely:
 `git branch -d <brachname>`
 2. To delete a local branch, whether tracking or non-tracking, forcefully:
