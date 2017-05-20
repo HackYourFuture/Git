@@ -6,9 +6,9 @@ Tutorial for HackYourFuture Git basics. This tutorial has three sections:
 # 1. Git: 
 
 ## 1.1 What is Git, Etymology and a short history.
-Distributed version control system
-Linus Torvalds, 2005
-GIT: Global Information Tracker or the stupid content tracker or unpleasant person in British slang
+* [ ] Version Control (aka Revision control, source control)
+* [ ] Distributed version control system, Linus Torvalds, 2005
+* [ ] GIT: Global Information Tracker or the stupid content tracker or unpleasant person in British slang
 
 ## 1.2 Installing Git
  For Windows,
@@ -57,7 +57,6 @@ GIT: Global Information Tracker or the stupid content tracker or unpleasant pers
 * A valid Email address
 * An SSH key-pair
 
- For you to be able to communicate with Github securely, you have to generate an ssh keypair, and then register it on the Github website.
 
 ## 2.2 Generating the ssh keypair
 
@@ -73,10 +72,15 @@ ssh-keygen -C "username@email.com" -t rsa
 
 Supply your Github email address instead of this fake one. 
 Accept the default location storage (default file) for the keys. When prompted for a passphrase, make up one, and don't forget it ! This is your private key, do not share it with anyone.
-You will have id_rsa and id_rsa.pub files in the directory at the following path /c/Users/<your_user_name>/.ssh/
+You will have id\_rsa and id\_rsa.pub files in the directory at the following path /c/Users/<your_user_name>/.ssh/
 
- You want to copy the contents of the id_rsa.pub (open it with a simple text editor or use the command cat in the Bash)
- After you copy the contents of the id_rsa.pub file, Go to the GitHub account, settings and SSH/GPG keys and add this key.
+ You want to copy the contents of the id\_rsa.pub (open it with a simple text editor or use the command cat in the Bash)
+ After you copy the contents of the id\_rsa.pub file, Go to the GitHub account, go to the settings find SSH and GPG keys option and add New SSH key.
+
+## 2.3 Creating a repository
+
+Using your GitHub account, create a repository to which you can add files. Name the repository as MyFirst. Create a public repository and check the box to create a README file. After you create the repository, the URL of your web page would be something like https://github.com/unmeshvrije/MyFirst . Replace unmeshvrije with your username. If you append .git to this URL, you will get the name of your GitHub repository: https://github.com/unmeshvrije/MyFirst.git
+
 
 
 # 3. Using Git
@@ -84,12 +88,14 @@ You will have id_rsa and id_rsa.pub files in the directory at the following path
 ## 3.1 Creating the repository
 ```
 Create a new directory in your home directory or any other suitable location using
-$ mkdir hello-world
+$mkdir hello-world
 Enter it
 $cd hello-world
 and create a new git repository using 
 $git init
 ```
+
+You can clone a repository with `git clone <URL>` command. This copies the repository from a remote machine and initializes it on your machine. You can try to clone some public repositories on github.com
 
 ## 3.2 Workflow
  Working Directory -> Index -> HEAD
@@ -97,28 +103,47 @@ $git init
 
  configure your email and username of Github in the git
  ```
- git config --global user.email "username@email.com"
- git config --global user.name "username"
+$git config --global user.email "username@email.com"
+$git config --global user.name "username"
 ```
 
  Make sure that the username is the one you used for the github account.
 
 ## 3.3 add and commit
 ```
- You can propose changes (add it to the Index) using
-$git add <filename>
-$git add *  # adds everything in the current directory
- This is the first step in the basic git workflow. To actually commit these changes use
-$git commit -m "Commit message"
+ #You can propose changes (add it to the Index) using
+ $git add <filename>
+ #This is the first step in the basic git workflow.
+ 
+ #To actually commit these changes use
+ $git commit -m "Commit message"
 ```
 
 ## 3.4 Pushing changes
 ```
- If you have not cloned (Our case) an existing repository and want to connect your repository to a remote server, you need to add it with
-git remote add origin <server>
-where
-<server> : https://github.com/user/repo.git
-Now you are able to push your changes to the selected remote server i.e. your remote repository on GitHub.
-Your changes are now in the HEAD of your local working copy. To send those changes to your remote repository, execute 
-git push -u origin master
+#If you have not cloned (Our case) an existing repository and want to connect your repository to a remote server, you need to add it with
+
+$git remote add origin https://github.com/unmeshvrije/MyFirst.git
+Replace the URL with the repository you created in step 2.3
+
+ Now you are able to push your changes to the selected remote server i.e. your remote repository on GitHub.
+ Your changes are now in the HEAD of your local working copy. To send those changes to your remote repository, execute 
+ $git push -u origin master
+```
+# Troubleshooting
+You could encounter errors if you do not follow the exact procedure as described above.
+```
+error: failed to push some refs to 'git@github.com:myrepo.git'
+
+Solution:
+
+$ git pull origin master
+```
+
+```
+fatal: refusing to merge unrelated histories
+
+Solution:
+
+$ git pull --allow-unrelated-histories
 ```
