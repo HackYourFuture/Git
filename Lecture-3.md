@@ -35,3 +35,5 @@ Steps in Forking Workflow:
 * You create a (feature) branch and make some commits
 * You push the branch in your repository
 * You create a pull request by navigating to your forked repository
+
+[Here](https://www.youtube.com/watch?v=-o0yomUVVpU&index=2&list=PLVYDhqbgYpYUGxRdtQdYVE5Q8h3bt6SIA) you can also find a tutorial made by Daan explaining the same concepts of how we would like you to hand in your homework from now on.

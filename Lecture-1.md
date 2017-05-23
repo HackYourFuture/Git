@@ -3,7 +3,7 @@ Tutorial for HackYourFuture Git basics. This tutorial has three sections:
 2. GitHub
 3. Using Git
 
-# 1. Git: 
+# 1. Git :octocat:: 
 
 ## 1.1 What is Git, Etymology and a short history.
 * [ ] Version Control (aka Revision control, source control)
@@ -72,7 +72,7 @@ ssh-keygen -C "username@email.com" -t rsa
 
 Supply your Github email address instead of this fake one. 
 Accept the default location storage (default file) for the keys. When prompted for a passphrase, make up one, and don't forget it ! This is your private key, do not share it with anyone.
-You will have id\_rsa and id\_rsa.pub files in the directory at the following path /c/Users/<your_user_name>/.ssh/
+You will have id\\\_*rsa and id\\\_rsa.pub files in the directory at the following path /c/Users/<your_user_name>/.ssh/
 
  You want to copy the contents of the id\_rsa.pub (open it with a simple text editor or use the command cat in the Bash)
  After you copy the contents of the id\_rsa.pub file, Go to the GitHub account, go to the settings find SSH and GPG keys option and add New SSH key.
@@ -96,6 +96,8 @@ $git init
 ```
 
 You can clone a repository with `git clone <URL>` command. This copies the repository from a remote machine and initializes it on your machine. You can try to clone some public repositories on github.com
+
+Need some more explanation? Than check out [this](https://www.youtube.com/watch?v=4xDSfNTi3p4&list=PLVYDhqbgYpYUGxRdtQdYVE5Q8h3bt6SIA) video Daan made about how to set up a new Git repo 
 
 ## 3.2 Workflow
  Working Directory -> Index -> HEAD
