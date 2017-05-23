@@ -1,9 +1,9 @@
-Tutorial for HackYourFuture Git basics. This tutorial has three sections:
+Tutorial for HackYourFuture Git basics :octocat:. This tutorial has three sections:
 1. Git
 2. GitHub
 3. Using Git
 
-# 1. Git :octocat:: 
+# 1. Git : 
 
 ## 1.1 What is Git, Etymology and a short history.
 * [ ] Version Control (aka Revision control, source control)
