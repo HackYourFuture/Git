@@ -147,5 +147,5 @@ fatal: refusing to merge unrelated histories
 
 Solution:
 
-$ git pull --allow-unrelated-histories
+$ git pull --allow-unrelated-histories origin master
 ```
