@@ -1,4 +1,4 @@
-This tutorial has three sections: (1) Branches (2) Checkout
+This tutorial has three sections: (1) Branches (2) Checkout (3) Cheat sheet
 
 
 # Branches
