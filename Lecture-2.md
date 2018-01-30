@@ -1,4 +1,4 @@
-This tutorial has three sections: (1) Branches (2) Checkout (3) HEAD
+This tutorial has three sections: (1) Branches (2) Checkout
 
 
 # Branches
@@ -9,6 +9,21 @@ Trees need branches to expand.
 Banks needs (office) branches to expand.
 Company needs (code) branches to expand.
 E.g. Branches for Bugs, testing, featuers, production, staging etc. 
+
+## What is a branch ?
+Branch is a name given to the commit. Internally, it is pointer to the commit object.
+By default, this name/pointer is **master**. Every time you make a new commit, this pointer moves forward.
+When you create a new branch, new name/pointer is created to point to the current commit.
+How does Git know which branch you are currently one ? It keeps a special pointer called **HEAD**.
+
+## HEAD in the Git
+ HEAD points to the tip of the "current branch". When you switch branches with `git checkout MyBranch` command, the HEAD starts to point to the tip of the new branch.
+To see where the HEAD is pointing, run: `cat .git/HEAD` in your working directory. In my case, the output is:
+```
+$ cat .git/HEAD
+ref: refs/heads/master
+```
+It is possible for HEAD to refer to a specific commit (revision) that is not associated with a branch name. This situation is called a detached HEAD.
 
 ## What is remote ?
 
@@ -127,6 +142,22 @@ $ tree -F .git/refs/remotes/
 
     If you could log in to the remote machine and find the repository in the filesystem, you could have a look at all its branches under refs/heads/.
 
+
+# Checkout
+
+    The git checkout command lets you navigate between the branches created by git branch. Checking out a branch updates the files in the working directory to match the version stored in that branch, and it tells Git to record all new commits on that branch. Think of it as a way to select which line of development you’re working on.
+
+To check out the specified branch, which should have already been created with git branch, run:
+`git checkout <existing-branch>`
+This makes <existing-branch> the current branch, and updates the working directory to match.
+
+To create and check out <new-branch>, run
+`git checkout -b <new-branch>`
+    The -b option is a convenience flag that tells Git to run git branch <new-branch> before running git checkout <new-branch>.
+
+
+
+
 # Cheat sheet:
 1. To delete a local branch, whether tracking or non-tracking, safely:
 `git branch -d <brachname>`
@@ -148,7 +179,7 @@ Example:
 `git status`
 9. To see the log of previous 'n' commits,
 `git log -n`
-10. To revert the changes just made in the file <filename>
+10. To restore the file <filename> to the version of latest commit
 `git checkout -- <filename>`
 11. To see the difference between the local repository and the latest commit (HEAD)
 `git diff [filename]`
@@ -161,32 +192,3 @@ Example:
 
     Examples: git branch origin/hello-kitty and git push --delete origin hello-kitty.
     It may seem arbritrary, but there's simple way to remember when to use a slash and when to use a space. When you're using a slash, you're referring to a remote-tracking branch on your own machine, whereas when you're using a  space, you're actually dealing with a branch on a remote machine over the network.
-
-
-# Checkout
-
-    The git checkout command lets you navigate between the branches created by git branch. Checking out a branch updates the files in the working directory to match the version stored in that branch, and it tells Git to record all new commits on that branch. Think of it as a way to select which line of development you’re working on.
-
-To check out the specified branch, which should have already been created with git branch, run:
-`git checkout <existing-branch>`
-This makes <existing-branch> the current branch, and updates the working directory to match.
-
-To create and check out <new-branch>, run
-`git checkout -b <new-branch>`
-    The -b option is a convenience flag that tells Git to run git branch <new-branch> before running git checkout <new-branch>. 
-
-
-# HEAD in the Git
-
-    HEAD points to the tip of the "current branch". When you switch branches with git checkout, the HEAD revision changes to point to the tip of the new branch.
-    To see where the HEAD is pointing, run:
-    cat .git/HEAD
-    In my case, the output is:
-```
-$ cat .git/HEAD 
-ref: refs/heads/master
-```
-It is possible for HEAD to refer to a specific revision that is not associated with a branch name. This situation is called a detached HEAD.
-
-
-
