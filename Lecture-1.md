@@ -72,7 +72,7 @@ ssh-keygen -C "username@email.com" -t rsa
 
 Supply your Github email address instead of this fake one. 
 Accept the default location storage (default file) for the keys. When prompted for a passphrase, make up one, and don't forget it ! This is your private key, do not share it with anyone.
-You will have `id\_*rsa` and `id\_rsa.pub` files in the directory at the following path `/c/Users/<your_user_name>/.ssh/`
+You will have `id_rsa` and `id_rsa.pub` files in the directory at the following path `/c/Users/<your_user_name>/.ssh/`
 
  You want to copy the contents of the id\_rsa.pub (open it with a simple text editor or use the command cat in the Bash)
  After you copy the contents of the id\_rsa.pub file, Go to the GitHub account, go to the settings find SSH and GPG keys option and add New SSH key.
