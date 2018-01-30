@@ -12,7 +12,7 @@ E.g. Branches for Bugs, testing, featuers, production, staging etc.
 
 ## What is remote ?
 
-If you're using Git collaboratively, you'll probably need to sync your commits with other machines or locations. In Git terminology, each machine or location is called a remote, and each one may have one or more branches. Most often, you'll just have one, named origin.
+If you're using Git collaboratively, you'll probably need to sync your commits with other machines or locations. In Git terminology, each machine or location is called a *remote*, and each one may have one or more branches. Most often, you'll just have one, named origin.
 To list all the remotes, run
 `$ git remote`
 
@@ -29,15 +29,14 @@ To list all the remotes, run
 ## Types of Branches
 
 On your local machine, you've got three types of branches:
- 1. local branches : non-tracking
- 2. local branches : tracking
- 3. remote-tracking branches
+ 1. local non-tracking branches
+ 2. local tacking branches (that often track remote tracking branch)
+ 3. remote-tracking branches (local copy of the remote branch)
 
-On a remote machine, you have just one type of branch
+On a remote machine, you have just one type of branch called *remote branch*.
 
-## Types of Branches (1) Branches on your machine:
 
-### 1.1 Local branches 
+### 1 Local branches 
 
  To view a list of all the local branches on your machine, run
 ```
@@ -51,11 +50,11 @@ $ git branch
 ```
 
  There are two types of local branches on your machine: non-tracking local branches, and tracking local branches.
-#### 1.1.1 Non-tracking local branches 
+#### 1.1 Non-tracking local branches 
   Non-tracking local branches are not associated with any other branch. To create one, run 
 `$ git branch <branchname>`
 
-####  1.1.2 Tracking local branches 
+#### 1.2 Tracking local branches 
 Tracking local branches are associated with another branch, usually a remote-tracking branch. To create one, run 
 `$ git branch --track <branchname> [<start-point>]`
 
@@ -80,8 +79,9 @@ From this command's output, you can see that the local branch master is tracking
 
 `$git branch --set-upstream new-feature <remote>/<branch>`
 
-###  1.2. Remote-tracking branches (still on your machine)
+### 2. Remote-tracking branches (still on your machine)
 
+A remote tracking branch is a local copy of a remote branch.
   To view a list of all the remote-tracking branches on your machine, run
 ```
   $ git branch -r
@@ -101,9 +101,9 @@ $ tree -F .git/refs/remotes/
 ```
 
   Think of your remote-tracking branches as your local cache for what the remote machines contain. You can update your remote-tracking branches using git fetch, which git pull uses behind the scenes.
-  Even though all the data for a remote-tracking branch is stored locally on your machine (like a cache), it's still never called a local branch. (At least, I wouldn't call it that!) It's just called a remote-tracking branch.
+  Even though all the data for a remote-tracking branch is stored locally on your machine (like a cache), it should never be called a local branch. It's just called a remote-tracking branch.
 
-##  Type of Branches (2) Branches on a remote machine:
+## Branches on a remote machine:
     To view all the remote branches (that is, the branches on the remote machine), run
 ```    
     $ git remote show origin
