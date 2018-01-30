@@ -12,7 +12,7 @@ E.g. Branches for Bugs, testing, featuers, production, staging etc.
 
 ## What is remote ?
 
-If you're using Git collaboratively, you'll probably need to sync your commits with other machines or locations. In Git terminology, each machine or location is called a *remote*, and each one may have one or more branches. Most often, you'll just have one, named origin.
+If you're using Git collaboratively, you'll probably need to sync your commits with other machines or locations. In Git terminology, each machine or location is called a **remote**, and each one may have one or more branches. Most often, you'll just have one, named origin.
 To list all the remotes, run
 `$ git remote`
 
@@ -33,7 +33,7 @@ On your local machine, you've got three types of branches:
  2. local tacking branches (that often track remote tracking branch)
  3. remote-tracking branches (local copy of the remote branch)
 
-On a remote machine, you have just one type of branch called *remote branch*.
+On a remote machine, you have just one type of branch called **remote branch**.
 
 
 ### 1 Local branches 
