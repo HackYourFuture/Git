@@ -65,14 +65,14 @@ Tutorial for HackYourFuture Git basics :octocat:. This tutorial has three sectio
 ssh-keygen.exe -C "username@email.com" -t rsa
 ```
 
-```
  For Linux/MAC, use
+```
 ssh-keygen -C "username@email.com" -t rsa
 ```
 
 Supply your Github email address instead of this fake one. 
 Accept the default location storage (default file) for the keys. When prompted for a passphrase, make up one, and don't forget it ! This is your private key, do not share it with anyone.
-You will have id\\\_*rsa and id\\\_rsa.pub files in the directory at the following path /c/Users/<your_user_name>/.ssh/
+You will have `id\_*rsa` and `id\_rsa.pub` files in the directory at the following path `/c/Users/<your_user_name>/.ssh/`
 
  You want to copy the contents of the id\_rsa.pub (open it with a simple text editor or use the command cat in the Bash)
  After you copy the contents of the id\_rsa.pub file, Go to the GitHub account, go to the settings find SSH and GPG keys option and add New SSH key.
@@ -108,8 +108,7 @@ Need some more explanation? Than check out [this](https://www.youtube.com/watch?
 $git config --global user.email "username@email.com"
 $git config --global user.name "username"
 ```
-
- Make sure that the username is the one you used for the github account.
+The username does not have to be same as your GitHub username.
 
 ## 3.3 add and commit
 ```
