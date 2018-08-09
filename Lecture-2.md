@@ -1,4 +1,4 @@
-This tutorial has three sections: (1) Branches (2) Checkout (3) Cheat sheet
+This tutorial has two sections: (1) Branches (2) Cheat sheet
 
 
 # Branches
@@ -40,6 +40,22 @@ To list all the remotes, run
  Each remote has a directory under git/refs/remotes/:
  $ ls -F .git/refs/remotes/
 ```
+
+## Checkout
+
+    The git checkout command lets you navigate between the branches created by git branch. Checking out a branch updates the files in the working directory to match the version stored in that branch, and it tells Git to record all new commits on that branch. Think of it as a way to select which line of development you’re working on.
+
+To check out the specified branch, which should have already been created with git branch, run:
+`git checkout <existing-branch>`
+This makes <existing-branch> the current branch, and updates the working directory to match.
+
+To create and check out <new-branch>, run
+`git checkout -b <new-branch>`
+    The -b option is a convenience flag that tells Git to run git branch <new-branch> before running git checkout <new-branch>.
+
+## Pushing the new local branch to remote Git repository
+`git checkout -b feature` creates and switches to a new branch **feature**
+`git push -u origin feature` will create the equivalent remote branch and push the changes from local **feature** branch.
 
 ## Types of Branches
 
@@ -141,21 +157,6 @@ $ tree -F .git/refs/remotes/
     From the output, you can see all the branches that exist on the remote machine by looking under the heading "Remote branches" (ignore lines marked as "stale").
 
     If you could log in to the remote machine and find the repository in the filesystem, you could have a look at all its branches under refs/heads/.
-
-
-# Checkout
-
-    The git checkout command lets you navigate between the branches created by git branch. Checking out a branch updates the files in the working directory to match the version stored in that branch, and it tells Git to record all new commits on that branch. Think of it as a way to select which line of development you’re working on.
-
-To check out the specified branch, which should have already been created with git branch, run:
-`git checkout <existing-branch>`
-This makes <existing-branch> the current branch, and updates the working directory to match.
-
-To create and check out <new-branch>, run
-`git checkout -b <new-branch>`
-    The -b option is a convenience flag that tells Git to run git branch <new-branch> before running git checkout <new-branch>.
-
-
 
 
 # Cheat sheet:
