@@ -159,6 +159,18 @@ $ tree -F .git/refs/remotes/
     If you could log in to the remote machine and find the repository in the filesystem, you could have a look at all its branches under refs/heads/.
 
 
+## Merging the changes from a branch
+To merge the changes from say branch `new-branch`, you cannot be on the `new-branch` itself.
+You have to checkout say a `master` branch with `git checkout master`.
+To confirm that you are on the master branch
+```
+$git branch
+*master
+new-branch
+```
+In this `*` indicates that you are currently on the `master` branch.
+`git merge new-branch` will then merge the latest commit from the `new-branch` into `master` branch.
+
 # Cheat sheet:
 1. To delete a local branch, whether tracking or non-tracking, safely:
 `git branch -d <brachname>`
